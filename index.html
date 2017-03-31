@@ -1,29 +1,18 @@
 <html>
-  <head>
-    <title>Blog</title>
-  </head>
-  <body>
-      <link rel="stylesheet" href="styles/style.css">
-    <header id="header"></header>
-    <footer id="footer"></footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script type="text/javascript">
-      $('#header').load('universal/header.html');
-      $('#footer').load('universal/footer.html');
-      function processBullets() {
-          var lastElement = false;
-          $("br").remove(".tempbreak");
-          $("ul li").each(function() {
-              $(this).removeClass("nobullet");
-              if (lastElement && lastElement.offset().top != $(this).offset().top) {
-                  $(lastElement).addClass("nobullet");
-                  $(lastElement).append('<br class="tempbreak" />');
-              }
-              lastElement = $(this);
-          }).last().addClass("nobullet");
-      }
-      
-    </script>
-      <div id="main">Hello</div>
-  </body>
+    <head>
+        <title>Blog</title>
+    </head>
+    <body>
+        <link rel="stylesheet" href="styles/style.css">
+        <header id="header"></header>
+        <div id="body"></div>
+        <footer id="footer"></footer>
+        <script src="script/navagate.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            $('#header').load('universal/header.html');
+              $('#body').load('universal/body.html');
+              $('#footer').load('universal/footer.html');
+        </script>
+    </body>
 </html>
