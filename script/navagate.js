@@ -14,6 +14,6 @@ function moveToTopic(topic, page) {
     }else if(topic == 5){ //c++
         topic = "cpp";
     }
-    var command = "$'#content').load('topics/"+topic+"/page"+page+".html')";
+    var command = "$('#content').load('topics/"+topic+"/page"+page+".html')";
     eval(command);
 }
